@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Work+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  /* position: absolute; */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f197a;
+  color: white;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  margin: 8px 20px 8px 50px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding-right: 40px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  /* width: 100px; */
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} 
+
+ul {
+  list-style: none;
+}
+
+
+
+aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 890px;
+  margin: 80px 10px 10px 50px;
+  background-color: #f5f5f5;
+  color: black;
+  padding: 10px;
+  border: 1px solid #980000;
+  border-radius: 8px;
+}
+
+.asideContent {
+  text-align: left;
+  padding: 15px;
+}
+
+.asideContent h1 {
+  color: #1f197a;
+  font-size: 20px;
+  font-weight: 700;
+}
+.profileImg {
+  width: 350px;
+  height: 350px;
+  margin-bottom: 15px;
+}
+
+.profileImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.bio {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.email,
+.location {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.email p,
+.location p {
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.Followers,
+.Gists,
+.publicRepo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: #fffade;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.Followers h3,
+.Gists h3,
+.publicRepo h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1f197a;
+}
+
+.Gists {
+  background-color: #e8d5b5;
+}
+
+.publicRepo {
+  background-color: #eccbff;
+  margin-bottom: 15px;
+}
+
+section {
+  margin: 94px 80px 0px 450px;
+}
+
+.Right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding-left: 10px;
+  margin: 40px 10px;
+}
+
+.repoBox {
+  padding: 20px 15px;
+  background-color: #e6f3f7;
+  color: #1f197a;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.repoBox a {
+  color: #1f197a;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.repoBox p {
+  margin-top: 20px;
+}
+
+.repoIcon {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.repoBox:nth-child(5n + 1) {
+  background-color: #e6f3f7;
+  box-shadow: 0px 5px 10px 0px #a5ccd6;
+}
+
+.repoBox:nth-child(5n + 2) {
+  background-color: #fffade;
+  box-shadow: 0px 5px 10px 0px #e6e0bb;
+}
+
+.repoBox:nth-child(5n + 3) {
+  background-color: #e8d5b5;
+  box-shadow: 0px 5px 10px 0px #e2cba3;
+}
+
+.repoBox:nth-child(5n + 4) {
+  background-color: #c6fced;
+  box-shadow: 0px 5px 10px 0px #a1dac9;
+}
+
+.repoBox:nth-child(5n + 5) {
+  background-color: #f7ebff;
+  box-shadow: 0px 5px 10px 0px #cbb9d4;
+}
+
+.repoBox:hover {
+  box-shadow: 0px 5px 10px 0px currentColor;
+}
+
+/* Spinner */
+.lds-dual-ring {
+  display: inline-block;
+  margin-top: 300px;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #1f197a;
+  border-color: #1f197a transparent #1f197a transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pagination  */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  border: none;
+}
+
+.pagination-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #0049a7;
+  border: none;
+}
+
+.pagination-child:hover {
+  background-color: #0049a7;
+  color: white;
+  font-weight: 700;
+}
+
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #0049a7;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.arrow {
+  padding: 0px 10px;
+}
+
+.pagination-child {
+  opacity: 1;
+  border: 1px solid #0049a7;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pagination-child:hover,
+.prev:hover,
+.next:hover {
+  transform: scale(1.1);
+}
+
+.disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sad-face {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+/* Repo Details Page */
+.repoContainer {
+  margin-top: 100px;
+  padding: 40px;
+  color: #1f197a;
+  text-align: left;
+}
+
+.stats {
+  padding-left: 20px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  background-color: white;
+  color: #1f197a;
+  border: 1px solid #1f197a;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.view {
+  background-color: #1f197a;
+  color: white;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.view:before, .back:before {
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+
+.view:hover:before, .back:hover:before {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #554af1;
+  filter: blur(1px);
+}
+
+.view:hover, .back:hover {
+  color: #1f197a;
+  box-shadow: 0 0 15px #554af1;
+  text-shadow: 0 0 15px #f8f7ee;
+}
+
+.back:hover {
+  text-shadow: 0 0 15px #554af1;
+}
+
+.proj_Name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px 10px 20px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.proj_Name p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.repoDetails {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 15px;
+  padding: 10px 20px 10px 8px;
+  margin-bottom: 15px;
+  color: #1f197a;
+}
+
+.repoDetails p {
+  border-bottom: 1px solid #8880f7;
+  padding-bottom: 8px;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  padding: 20px 20px 10px 20px;
+}
+
+.statsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-wrap: break-word;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.statsBox:nth-child(5n + 1) {
+  background-color: #e6f3f7;
+  box-shadow: 0px 5px 10px 0px #a5ccd6;
+}
+
+.statsBox:nth-child(5n + 2) {
+  background-color: #fffade;
+  box-shadow: 0px 5px 10px 0px #e6e0bb;
+}
+
+.statsBox:nth-child(5n + 3) {
+  background-color: #e8d5b5;
+  box-shadow: 0px 5px 10px 0px #e2cba3;
+}
+
+.statsBox:nth-child(5n + 4) {
+  background-color: #c6fced;
+  box-shadow: 0px 5px 10px 0px #a1dac9;
+}
+
+.statsBox:nth-child(5n + 5) {
+  background-color: #f7ebff;
+  box-shadow: 0px 5px 10px 0px #cbb9d4;
+}
+
+.statsBox:hover {
+  box-shadow: 0px 5px 10px 0px currentColor;
+}
+
+/* Errorpage */
+.errorContainer {
+  display: grid;
+  place-items: center;
+}
+.errorBox {
+  width: 400px;
+  background-color: #1f197a;
+  color: white;
+  border-radius: 8px;
+  margin: 100px 40px 40px 40px;
+  padding: 40px;
+  box-shadow: 0px 5px 10px 0px rgb(31, 25, 127);
+}
+
+.errorContainer h1 {
+  margin-bottom: 20px;
+}
+
+.backTwo {
+  margin: 100px 0px 0px 40px;
+}
+
+@media screen and (max-width: 800px) {
+  aside {
+    position: static;
+    width: 400px;
+  }
+
+  .Right {
+    position: absolute;
+    top: 114%;
+    bottom: 0;
+    left: 14%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobilePagination {
+    position: absolute;
+    top: 250%;
+    bottom: 0;
+    left: 14%;
+    right: 0;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .errorBox {
+    width: 300px;
+  }
+}
