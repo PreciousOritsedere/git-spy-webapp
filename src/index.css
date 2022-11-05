@@ -533,4 +533,9 @@ section {
   .errorBox {
     width: 300px;
   }
+
+  .errorMessage {
+    overflow-wrap: break-word;
+    color: red;
+  }
 }
