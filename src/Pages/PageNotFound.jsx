@@ -3,7 +3,7 @@ import Sadface from "../assets/Image/Sad face.jpg";
 
 function PageNotFound() {
   return (
-    <div>
+    <div className="notFound">
         <img src={Sadface} alt="sad face" className="sad-face"/>
       <h1>Opps <br></br>Page Not Found</h1>
     </div>

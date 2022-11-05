@@ -9,7 +9,6 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  /* position: absolute; */
 }
 
 nav {
@@ -29,6 +28,7 @@ nav {
   height: 40px;
   margin: 8px 20px 8px 50px;
 }
+
 .logo img {
   width: 100%;
   height: 100%;
@@ -48,11 +48,10 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   margin-right: 20px;
-  /* width: 100px; */
 }
 
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50px;
   transform: scaleX(0);
@@ -67,13 +66,11 @@ nav ul {
 .link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-} 
+}
 
 ul {
   list-style: none;
 }
-
-
 
 aside {
   position: absolute;
@@ -100,6 +97,7 @@ aside {
   font-size: 20px;
   font-weight: 700;
 }
+
 .profileImg {
   width: 350px;
   height: 350px;
@@ -234,6 +232,7 @@ section {
   width: 80px;
   height: 80px;
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -245,6 +244,7 @@ section {
   border-color: #1f197a transparent #1f197a transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
@@ -290,6 +290,7 @@ section {
   font-weight: 500;
   cursor: pointer;
 }
+
 .arrow {
   padding: 0px 10px;
 }
@@ -317,6 +318,10 @@ section {
   text-align: center;
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.notFound {
+  margin-top: 80px;
 }
 
 .sad-face {
@@ -359,18 +364,21 @@ section {
   cursor: pointer;
 }
 
-.view:before, .back:before {
+.view:before,
+.back:before {
   transition: 0.5s;
   transform: scale(0.9);
 }
 
-.view:hover:before, .back:hover:before {
+.view:hover:before,
+.back:hover:before {
   transform: scale(1.2);
   box-shadow: 0 0 15px #554af1;
   filter: blur(1px);
 }
 
-.view:hover, .back:hover {
+.view:hover,
+.back:hover {
   color: #1f197a;
   box-shadow: 0 0 15px #554af1;
   text-shadow: 0 0 15px #f8f7ee;
@@ -462,6 +470,7 @@ section {
   display: grid;
   place-items: center;
 }
+
 .errorBox {
   width: 400px;
   background-color: #1f197a;
@@ -481,28 +490,43 @@ section {
 }
 
 @media screen and (max-width: 800px) {
-  aside {
-    position: static;
-    width: 400px;
+  .logo {
+    margin-left: 0;
   }
 
-  .Right {
+  .link {
+    padding: 0;
+  }
+
+  nav ul li a {
+    margin: 0;
+    padding: 0;
+    padding-right: 8px;
+  }
+
+  aside {
+    position: static;
+    left: 0;
+    right: 0;
+    width: 380px;
+  }
+
+  .profileImg {
+    width: 330px;
+    height: 330px;
+  }
+
+  .bottom {
     position: absolute;
-    top: 114%;
+    top: 980px;
     bottom: 0;
-    left: 14%;
+    left: 5%;
     right: 0;
     margin: 0;
     padding: 0;
   }
 
   .mobilePagination {
-    position: absolute;
-    top: 250%;
-    bottom: 0;
-    left: 14%;
-    right: 0;
-    margin: 0;
     padding-bottom: 20px;
   }
 

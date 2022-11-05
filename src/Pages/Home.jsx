@@ -61,9 +61,9 @@ function Home() {
   const numberOfPages = Math.ceil(repos.length / repoPerPage);
 
   return (
-    <div>
+    <>
       {location.pathname === "/" ? (
-        <>
+        <div className="Container">
           <aside>
             <div className="asideContent">
               <div className="profileImg">
@@ -106,7 +106,7 @@ function Home() {
             </div>
           </aside>
 
-          <section>
+          <section className="bottom">
             <div className="Right">
               {currRepo.map((repo) => (
                 <Link
@@ -128,9 +128,6 @@ function Home() {
                 </Link>
               ))}
             </div>
-          </section>
-
-          <section>
             <div className="mobilePagination">
               <ErrorBoundary FallbackComponent={ErrorFallback}>
                 <Pagination
@@ -141,11 +138,11 @@ function Home() {
               </ErrorBoundary>
             </div>
           </section>
-        </>
+        </div>
       ) : (
         <Outlet />
       )}
-    </div>
+    </>
   );
 }
 
