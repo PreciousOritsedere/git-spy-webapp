@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ReactComponent as LeftArrow } from "../assets/Icons/LeftArrow.svg";
 import { ReactComponent as Fork } from "../assets/Icons/Fork.svg";
 import { ReactComponent as Language } from "../assets/Icons/Language.svg";
@@ -43,6 +44,11 @@ function RepoDetails() {
 
   return (
     <>
+      <Helmet>
+        <title>Single Repo Details | Git Spy</title>
+        <meta name="description" content="Here you can view the details of the repo you clicked on" />
+        <link rel="canonical" href="/repodetails" />
+      </Helmet>
       <div className="repoContainer">
         <Link to="/">
           <button className="back">

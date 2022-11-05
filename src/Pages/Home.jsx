@@ -8,6 +8,7 @@ import { ReactComponent as Gist } from "../assets/Icons/Edit.svg";
 import { ReactComponent as Message } from "../assets/Icons/Document.svg";
 import { ReactComponent as RepoLink } from "../assets/Icons/external-link.svg";
 import { ErrorBoundary } from "react-error-boundary";
+import { Helmet } from "react-helmet-async";
 import ErrorFallback from "../Components/ErrorFallback";
 import Pagination from "../Components/Pagination";
 import Spinner from "../Components/Spinner";
@@ -62,6 +63,11 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Home | Git Spy</title>
+        <meta name="description" content="Home page of Git Spy" />
+        <link rel="canonical" href="/home" />
+      </Helmet>
       {location.pathname === "/" ? (
         <div className="Container">
           <aside>
