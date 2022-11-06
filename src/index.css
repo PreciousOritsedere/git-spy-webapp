@@ -37,23 +37,26 @@ nav {
 a {
   text-decoration: none;
   color: white;
-  padding-right: 40px;
   font-size: 16px;
   font-weight: 500;
 }
 
 nav ul {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 14px;
   margin-right: 20px;
+}
+
+.link {
+  position: relative;
 }
 
 .link::after {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 100%;
   transform: scaleX(0);
   height: 2px;
   bottom: 0;
@@ -114,7 +117,7 @@ aside {
   margin-top: 15px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .email,
@@ -506,24 +509,13 @@ section {
 
   aside {
     position: static;
-    left: 0;
-    right: 0;
-    width: 380px;
-  }
-
-  .profileImg {
-    width: 330px;
-    height: 330px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 0;
   }
 
   .bottom {
-    position: absolute;
-    top: 980px;
-    bottom: 0;
-    left: 5%;
-    right: 0;
-    margin: 0;
-    padding: 0;
+    margin: 30px 0px;
   }
 
   .mobilePagination {

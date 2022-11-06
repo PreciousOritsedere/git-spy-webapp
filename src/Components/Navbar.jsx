@@ -9,21 +9,11 @@ function Navbar() {
         <img src={Logo} alt="Logo" />
       </div>
       <ul>
-        <li>
-          <span className="link">
-          <Link to="/">
-            Home
-          </Link>
-
-          </span>
+        <li className="link">
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <span className="link">
-          <Link to="/errortest">
-            Error Test
-          </Link>
-
-          </span>
+        <li className="link">
+          <Link to="/errortest">Error Test</Link>
         </li>
       </ul>
     </nav>
